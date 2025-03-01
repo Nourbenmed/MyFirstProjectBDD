@@ -6,6 +6,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.Before;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 public class Setup {
 
@@ -19,7 +24,7 @@ public class Setup {
             browser = "chrome";
         }
         switch (browser) {
-            case "chrome":
+           case "chrome":
             	System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/win/chromedriver.exe");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("['start-maximized']");
@@ -27,12 +32,17 @@ public class Setup {
                 driver.manage().window().maximize();
                 PageDriver.getInstance().setDriver(driver);
                 break;
-            case "firefox":
-                driver = new FirefoxDriver();
+           /* case "firefox":
+                System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/win/geckodriver.exe");
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("--start-maximized");
+                driver = new FirefoxDriver(firefoxOptions);
                 driver.manage().window().maximize();
-                break;
+                PageDriver.getInstance().setDriver(driver);
+                break;*/
             default:
                 throw new IllegalArgumentException("Browser \"" + browser + "\" isn't supported.");
         }
     }
+
 }

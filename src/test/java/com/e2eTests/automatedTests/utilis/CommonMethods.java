@@ -1,12 +1,10 @@
 package com.e2eTests.automatedTests.utilis;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Properties;
 import java.util.regex.Matcher;
@@ -36,32 +34,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * to perform actions on webelement. It is a repository so 
  * that same code need not to be written again.
  *
- */import org.openqa.selenium.support.ui.WebDriverWait;
-
-
+ */
 
 
 /**
  * This class contains all the methods required by selenium
  * to perform actions on webelement. It is a repository so
  * that same code need not to be written again.
- * @author Zied HANNACHI
  *
  */
-public class CommonMethods extends Assertions {
+public class CommonMethods{
 
-	WebDriver driver = null;
+	public static WebDriver driver ;
+
 	public final int timeOut = 45;
-	Properties configProp = new Properties();
-	protected FileInputStream configFis;
-	protected File file = new File("");
 
-	public CommonMethods(WebDriver driver) {
-		super(driver);
-		this.driver = driver;
+	public CommonMethods() {
+		driver = Setup.driver;
 	}
 
-
+	public void openUrlWithConfigFile(String url) throws IOException {
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream("src/test/resources/configs/config.properties");
+		prop.load(fis);
+		driver.get(prop.getProperty(url));
+	}
 
 	/**
 	 * method to open specified url
@@ -71,7 +68,6 @@ public class CommonMethods extends Assertions {
 	public void get(String url){
 		driver.get(url);
 	}
-
 
 	/**
 	 * method to navigate to specified page
@@ -301,16 +297,6 @@ public class CommonMethods extends Assertions {
 
 
 
-	public static void runningShellCommand(String command) throws IOException, InterruptedException{
-		Runtime run = Runtime.getRuntime();
-		Process pr = run.exec(command);
-		pr.waitFor();
-		BufferedReader buf = new BufferedReader(new InputStreamReader(pr.getInputStream()));
-		String line = "";
-		while ((line=buf.readLine())!=null) {
-			//Log.info(line);
-		}
-	}
 	/**
 	 * method to accept alert,
 	 * exception is thrown if no alert is present

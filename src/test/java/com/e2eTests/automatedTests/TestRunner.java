@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src/specs/features"},
         strict = false, 
-        plugin = {"pretty", "json:target/cucumber_json_reports/cucumber.json", "html:target/cucumber-report", "com.cucumber.listener.ExtentCucumberFormatter:target/extent-reports/ExtentReport.html"},
+        plugin = {"pretty", "html:target/cucumber_html_report", "com.cucumber.listener.ExtentCucumberFormatter:target/extent-reports/OrangeHRM.html"},
         snippets = SnippetType.CAMELCASE,
         tags = ("@connexion"),
         monochrome = true)
