@@ -135,7 +135,7 @@ La classe d’exécution est sous src/test/java / TestRunnerCucumber.java
 # Reporting 
 
 Les résultats de test s’affichent dans un rapport Extent nommé OrangeHRM.html dans le dossier Target / extent-reports
-![Extent report](src/test/resources/com/e2eTests/automatedTests/ExtentReport.PNG)
+![Extent report](src/test/resources/com/e2eTests/automatedTests/ExtentReport.png)
 
 
 # Synthèse Framework de test auto en BDD

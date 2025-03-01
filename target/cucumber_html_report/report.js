@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 2833982200,
+  "duration": 2789981700,
   "status": "passed"
 });
 formatter.scenario({
@@ -59,7 +59,7 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeMeConnecteÀLApplicationOrangeHRM()"
 });
 formatter.result({
-  "duration": 3790278800,
+  "duration": 2565366900,
   "status": "passed"
 });
 formatter.match({
@@ -72,7 +72,7 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeSaisieUsername(String)"
 });
 formatter.result({
-  "duration": 828629100,
+  "duration": 819420100,
   "status": "passed"
 });
 formatter.match({
@@ -85,25 +85,25 @@ formatter.match({
   "location": "AuthenticationStepDefinitions.jeSaisiePassword(String)"
 });
 formatter.result({
-  "duration": 185767600,
+  "duration": 170352000,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthenticationStepDefinitions.jeCliqueSurLeBouttonLogin()"
 });
 formatter.result({
-  "duration": 1133660600,
+  "duration": 121046500,
   "status": "passed"
 });
 formatter.match({
   "location": "AuthenticationStepDefinitions.jeMeRedirigeVersLeCompteAdmin()"
 });
 formatter.result({
-  "duration": 638704000,
+  "duration": 1712130500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 234900,
+  "duration": 234500,
   "status": "passed"
 });
 });
