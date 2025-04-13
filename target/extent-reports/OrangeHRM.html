@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 1, 2025 09:11:14 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 13, 2025 07:15:30 PM</span>
 				</a>
 			</li>
 			<li>
@@ -90,8 +90,8 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@connexion</a></li>
-					<li><a href='#'>@cnx</a></li>
+					<li><a href='#'>@tag</a></li>
+					<li><a href='#'>@tag2</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -154,7 +154,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -169,7 +169,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -188,60 +188,75 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Authentication - OrangeHRM</span>
-						<span class='test-time'>Mar 1, 2025 09:11:14 PM</span>
+						<span class='test-name'>Authentication - Outline - OrangeHRM</span>
+						<span class='test-time'>Apr 13, 2025 07:15:30 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@cnx</span>
-	</div>
-	<span class='duration right label'>0h 0m 8s+313ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 15s+801ms</span>
 	<div class='desc'>
-		<b>Scenario</b>
+		<b>ScenarioOutline</b>
 		<span class="desc-text">Authentication - OrangeHRM</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given pass' status='pass'>
+		<li test-id='3' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@tag</span>
+				<span class='category label white-text'>@tag2</span>
+			</div>
 			
-			<b>Given</b>
+			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Given Je me connecte à l'application OrangeHRM</span>
-				<div class='pre'>passed</div>
+			<span class="bdd-step-name">Authentication - OrangeHRM</span>
 			
+				<ul class='steps'>
+					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given Je me connecte à l'application OrangeHRM</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='5' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When Je saisie Username "admin"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='6' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Je saisie Password "admin123"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='7' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Je clique sur le boutton login</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
 		</li>
-		<li test-id='4' class='node when pass' status='pass'>
+		<li test-id='8' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@tag</span>
+				<span class='category label white-text'>@tag2</span>
+			</div>
 			
-			<b>When</b>
+			<b>Scenario</b>
 			
-			<span class="bdd-step-name">When Je saisie Username "admin"</span>
-				<div class='pre'>passed</div>
+			<span class="bdd-step-name">Authentication - OrangeHRM</span>
 			
-		</li>
-		<li test-id='5' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Je saisie Password "admin123"</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='6' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Je clique sur le boutton login</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='7' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then Je me redirige vers le compte admin</span>
-				<div class='pre'>passed</div>
-			
+				<ul class='steps'>
+					<li test-id='9' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given Je me connecte à l'application OrangeHRM</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='10' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When Je saisie Username "admin1"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='11' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Je saisie Password "admin123"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='12' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Je clique sur le boutton login</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
 		</li>
 	</ul>
 </div>
@@ -299,14 +314,14 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@connexion</span>
+						<span class='category-name'>@tag</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label pass'>3</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
 							
 							
 						</div>
@@ -322,8 +337,18 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 1, 2025 09:11:14 PM</td>
-										<td class='linked' test-id='1'>Authentication - OrangeHRM</td>
+										<td>Apr 13, 2025 07:15:30 PM</td>
+										<td class='linked' test-id='1'>Authentication - Outline - OrangeHRM</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 13, 2025 07:15:30 PM</td>
+										<td class='linked' test-id='3'>Authentication - Outline - OrangeHRM.Authentication - OrangeHRM.Authentication - OrangeHRM</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 13, 2025 07:15:40 PM</td>
+										<td class='linked' test-id='8'>Authentication - Outline - OrangeHRM.Authentication - OrangeHRM.Authentication - OrangeHRM</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -333,14 +358,14 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@cnx</span>
+						<span class='category-name'>@tag2</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -356,8 +381,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 1, 2025 09:11:14 PM</td>
-										<td class='linked' test-id='2'>Authentication - OrangeHRM.Authentication - OrangeHRM</td>
+										<td>Apr 13, 2025 07:15:30 PM</td>
+										<td class='linked' test-id='3'>Authentication - Outline - OrangeHRM.Authentication - OrangeHRM.Authentication - OrangeHRM</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 13, 2025 07:15:40 PM</td>
+										<td class='linked' test-id='8'>Authentication - Outline - OrangeHRM.Authentication - OrangeHRM.Authentication - OrangeHRM</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -392,31 +422,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 1, 2025 09:11:14 PM</div>
+					<div class='panel-lead'>Apr 13, 2025 07:15:30 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 1, 2025 09:11:23 PM</div>
+			 		<div class='panel-lead'>Apr 13, 2025 07:15:46 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 8s+609ms</div>
+					<div class='panel-lead'>0h 0m 15s+994ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -432,8 +462,8 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@connexion</td>
-							<td>1</td>
+							<td>@tag</td>
+							<td>3</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -441,8 +471,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@cnx</td>
-							<td>1</td>
+							<td>@tag2</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -470,7 +500,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -479,7 +509,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 5,
+				passGrandChild: 8,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

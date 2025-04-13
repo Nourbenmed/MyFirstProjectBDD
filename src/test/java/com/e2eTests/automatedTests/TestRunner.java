@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
         strict = false, 
         plugin = {"pretty", "html:target/cucumber_html_report", "com.cucumber.listener.ExtentCucumberFormatter:target/extent-reports/OrangeHRM.html"},
         snippets = SnippetType.CAMELCASE,
-        tags = ("@connexion"),
+        tags = ("@tag"),
         monochrome = true)
 
 public class TestRunner {

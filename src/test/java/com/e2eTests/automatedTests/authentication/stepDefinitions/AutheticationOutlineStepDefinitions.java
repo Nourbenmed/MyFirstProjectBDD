@@ -6,13 +6,14 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class AutheticationOutlineStepDefinitions {
     public WebDriver driver;
     private AuthenticationPage authenticationPage = new AuthenticationPage();
-   public void AuthenticationOutlineStepDefinitions() {
-       driver = Setup.driver;
-       PageFactory.initElements(driver, AuthenticationPage.class);
-   }
+    public void AuthenticationOutlineStepDefinitions() {
+        driver = Setup.driver;
+        PageFactory.initElements(driver, AuthenticationPage.class);
+    }
 
     @When("^Je saisie login \"([^\"]*)\"$")
     public void jeSaisieLogin(String name) throws Throwable {
